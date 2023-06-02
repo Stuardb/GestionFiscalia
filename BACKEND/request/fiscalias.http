@@ -1,0 +1,50 @@
+# @api = http://localhost:4000/products
+# GET {{api}}
+
+# ###
+# POST {{api}}
+# Content-Type: application/json
+
+# {
+#     "name": "microfono",
+#     "description": "logitech 123"
+# }
+
+# ###
+# GET {{api}}/1
+
+@api = http://localhost:4000/fiscalias
+
+###
+# Obtener todas las fiscalías
+GET {{api}}
+
+###
+# Agregar una nueva fiscalía
+POST {{api}}
+Content-Type: application/json
+
+{
+    "nombre": "Fiscalía MIXCO",
+    "ubicacion": "Ubicación 1",
+    "telefono": "123456789"
+}
+
+###
+# Obtener una fiscalía por ID
+GET {{api}}/1
+
+###
+# Actualizar una fiscalía
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "nombre": "Fiscalía NUEVO NOMBRE",
+    "ubicacion": "Nueva ubicación",
+    "telefono": "987654321"
+}
+
+###
+# Eliminar una fiscalía
+DELETE {{api}}/4
